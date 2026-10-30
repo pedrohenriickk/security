@@ -19,7 +19,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/usuario").permitAll()
-                        .requestMatchers("/tcc").hasRole("Aluno")
+                        .requestMatchers("/tcc").hasRole("ALUNO")
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults());
